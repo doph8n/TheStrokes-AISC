@@ -8,7 +8,7 @@ import matplotlib as plt
 # Turns the CSV into a dataframe named stroke
 stroke = pd.read_csv('healthcare-dataset-stroke-data - healthcare-dataset-stroke-data.csv')
 
-# Drops IDs as it is non important for the ML
+# Drops IDs and Stroke as it is non important for the ML
 stroke = stroke.drop(['id'], axis = 1)
 
 pd.set_option('future.no_silent_downcasting', True)
@@ -36,4 +36,7 @@ stroke['Residence_type'] = stroke['Residence_type'].replace({'Urban': 0, 'Rural'
 # Turning smoking_status into a number, 0 = never smoked, 1 = unknown, 2 = formerly smokes, 3 = smokes
 stroke['smoking_status'] = stroke['smoking_status'].replace({'never smoked': 0, 'Unknown': 1, 'formerly smoked': 2, 'smokes': 3})
 
-# seaborn - reading data --------------------------------------------------------------------------------------------------------ea
+print(stroke.head(25))
+
+# seaborn - reading data --------------------------------------------------------------------------------------------------------
+
