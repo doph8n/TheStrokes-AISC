@@ -1,7 +1,9 @@
 import pandas as pd
 import numpy as np
-import seaborn
-import matplotlib
+import seaborn as sns
+import matplotlib as plt
+
+# pandas - cleaning data --------------------------------------------------------------------------------------------------------
 
 # Turns the CSV into a dataframe named stroke
 stroke = pd.read_csv('healthcare-dataset-stroke-data - healthcare-dataset-stroke-data.csv')
@@ -34,4 +36,4 @@ stroke['Residence_type'] = stroke['Residence_type'].replace({'Urban': 0, 'Rural'
 # Turning smoking_status into a number, 0 = never smoked, 1 = unknown, 2 = formerly smokes, 3 = smokes
 stroke['smoking_status'] = stroke['smoking_status'].replace({'never smoked': 0, 'Unknown': 1, 'formerly smoked': 2, 'smokes': 3})
 
-print(stroke.head(10))
+# seaborn - reading data --------------------------------------------------------------------------------------------------------ea
