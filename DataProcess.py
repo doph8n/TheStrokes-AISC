@@ -9,6 +9,8 @@ stroke = pd.read_csv('healthcare-dataset-stroke-data - healthcare-dataset-stroke
 # Drops IDs as it is non important for the ML
 stroke = stroke.drop(['id'], axis = 1)
 
+pd.set_option('future.no_silent_downcasting', True)
+
 # Removing N/A from the BMI data and inputing the mean
 Bmi_Mean = stroke['bmi'].mean()
 stroke.replace(['N/A'], np.nan, inplace=False)
